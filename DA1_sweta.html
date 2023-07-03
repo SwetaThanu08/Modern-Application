@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+<head >
+<h1 style="background-color:#99ffcc; text-align:center;border-radius:20px;">Chennai 
+Metro Station</h1>
+</head>
+
+<style>
+body{
+background-image: url('http://wallpaperset.com/w/full/7/5/a/545589.jpg');
+text-align: center;
+}
+div.container {
+text-align: center;
+}
+ul.myUL {
+display: inline-block;
+text-align: left;
+}
+input[type=text] {
+border: 2px $blue;
+border-radius: 4px;
+}
+label{
+font-size:18px;
+}
+table {
+margin-left: auto;
+margin-right: auto;
+border-collapse: collapse;
+width: 100%;
+border: 1px solid #1843a8;
+}
+td, th {
+border: 1px solid #1843a8;
+text-align: center;
+padding: 8px;
+}
+</style>
+
+<body>
+<div class="container">
+<ul class="myUL">
+<LI style="font-size:20px;"> Enter your Name.
+<LI style="font-size:20px;"> Enter your License plate number.
+<LI style ="font-size:20px;">Enter your Phone Number.
+<LI style ="font-size:20px;">Enter your Vehicle Type.
+</ul>
+</div>
+<h3><a href="https://chennaimetrorail.org/">Project Metro</a></h3>
+
+<form id="form-user" method="post" action="#">
+<label for="fname" >First name:</label><br>
+<input type="text" id="fname" name="fname"><br>
+<label for="vehicle_num">Vehicle Number:</label><br>
+<input type="text" id="vehicle_num" name="vehicle_num" ><br>
+<label for="phone">Phone Number:</label><br>
+<input type="text" id="phone" name="phone" ><br>
+<label for="type"></label>Vehicle type:<br>
+<input type="text" id="type" name="type" ><br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset" >
+</form>
+
+<h3>
+<a href="https://parkingrate.com/">PARKING RATES OF METRO STATION</a>
+</h3>
+<form method="post" action="/{{url}}">
+<table border=10>
+<tr>
+<th>VEHICLE TYPE</th>
+<th>RATE (per hour)</th>
+</tr>
+<tr>
+<td>2 WHEELER</td>
+<td>100/-</td>
+</tr>
+<tr>
+<td>4 WHEELER</td>
+<td>300/-</td>
+</tr>
+<tr>
+<td>HEAVY VEHICLES</td>
+<td>1000/-</td>
+</tr>
+</table>
+
+<script type="text/javascript>
+
+const submit =function(ev){ 
+ev.preventDefault(); 
+ev.stopPropagation(); 
+alert("submitted successfully");  
+}  
+
+const reset = function(ev){
+   
+    ev.preventDefault();
+
+    document.getElementById('form-user').reset();
+
+}
+</script>
+</body>
+</html>
+
